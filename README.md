@@ -2,7 +2,7 @@
 
 为 Token Monitor 提供基于 OneBot (v11) 协议的机器人网关扩展，实现跨平台的 Token 用量查询、原生暗黑卡片渲染、定时日报推送与超额告警订阅服务。
 
-[Release v1.0.0](https://github.com/BYWled/token-monitor-plugin-onebot/releases) · [License: GPL-3.0](LICENSE) · [GitHub 仓库](https://github.com/BYWled/token-monitor-plugin-onebot) · [Gitee 镜像](https://gitee.com/BYWled/token-monitor-plugin-onebot)
+[Release v1.0.0](https://github.com/BYWled/token-monitor-plugin-onebot/releases) · [License: GPL-3.0](LICENSE) · [GitHub 仓库](https://github.com/BYWled/token-monitor-plugin-onebot) · [Gitee 镜像](https://gitee.com/BYWled/token-monitor-plugin-onebot) · [GitCode 镜像](https://gitcode.com/BYWled/token-monitor-plugin-onebot)
 
 ![Token Monitor 今日用量与模型分布卡片](docs/images/overview.png)
 

@@ -2,7 +2,7 @@
 
 A desktop plugin providing OneBot (v11) protocol gateway capabilities for Token Monitor, enabling cross-platform token usage queries, native dark-themed card rendering, scheduled daily reports, and threshold alert subscriptions.
 
-[Release v1.0.0](https://github.com/BYWled/token-monitor-plugin-onebot/releases) · [License: GPL-3.0](LICENSE) · [GitHub Repository](https://github.com/BYWled/token-monitor-plugin-onebot) · [Gitee Mirror](https://gitee.com/BYWled/token-monitor-plugin-onebot)
+[Release v1.0.0](https://github.com/BYWled/token-monitor-plugin-onebot/releases) · [License: GPL-3.0](LICENSE) · [GitHub Repository](https://github.com/BYWled/token-monitor-plugin-onebot) · [Gitee Mirror](https://gitee.com/BYWled/token-monitor-plugin-onebot) · [GitCode Mirror](https://gitcode.com/BYWled/token-monitor-plugin-onebot)
 
 ![Token Monitor Daily Usage Card](docs/images/overview.png)
 
