@@ -8,7 +8,7 @@ A desktop plugin providing OneBot (v11) protocol gateway capabilities for Token 
 
 ## Compatibility
 
-- **Token Monitor**: `>= 1.0.0` (API contract: `tmApi: 1`)
+- **Token Monitor**: Any version supporting desktop plugins (`tmApi: 1`, e.g. `>= 0.80.0`)
 - **Platforms**: Windows (x64 / arm64), macOS (Apple Silicon / Intel), Linux (x64)
 - **Runtime**: Built with native Node.js standard libraries and pure RFC-6455 WebSocket protocol. **Zero external npm dependencies**. Image card rendering utilizes the system-installed Chrome, Edge, or Chromium browser (available by default on desktop systems).
 

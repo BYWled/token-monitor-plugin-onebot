@@ -8,7 +8,7 @@
 
 ## Compatibility
 
-- **Token Monitor**: `>= 1.0.0`（API 契约：`tmApi: 1`）
+- **Token Monitor**: 支持插件系统的版本（`tmApi: 1`，如 `>= 0.80.0`）
 - **支持平台**: Windows (x64 / arm64)、macOS (Apple Silicon / Intel)、Linux (x64)
 - **运行依赖**: 内置纯 Node.js 标准库与 RFC-6455 协议驱动，**零 npm 外部第三方依赖**。图片卡片渲染直接调用系统中已安装的 Chrome、Edge 或 Chromium 浏览器（主流桌面系统自带）。
 
