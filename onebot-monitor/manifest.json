@@ -37,6 +37,9 @@
       "icon": "bot"
     }
   ],
+  "defaults": {
+    "background": true
+  },
   "settings": {
     "version": 1,
     "fields": [

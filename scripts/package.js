@@ -49,8 +49,17 @@ function packagePlugin(sourceDir, outputFile) {
 if (require.main === module) {
   const [src, out] = process.argv.slice(2);
   const source = src || path.resolve(__dirname, '../onebot-monitor');
-  const output = out || path.resolve(__dirname, '../onebot-monitor.tmplugin');
-  packagePlugin(source, output);
+  const defaultVersionedOut = path.resolve(__dirname, '../onebot-monitor-1.0.0.tmplugin');
+  const defaultOut = path.resolve(__dirname, '../onebot-monitor.tmplugin');
+  
+  const target = out || defaultVersionedOut;
+  packagePlugin(source, target);
+
+  // If user didn't specify a custom output, also update onebot-monitor.tmplugin alias
+  if (!out) {
+    fs.copyFileSync(target, defaultOut);
+    console.log(`Also copied to alias: ${defaultOut}`);
+  }
 }
 
 module.exports = { packagePlugin };
