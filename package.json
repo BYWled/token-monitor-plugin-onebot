@@ -1,0 +1,33 @@
+{
+  "name": "token-monitor-plugin-onebot",
+  "version": "1.0.0",
+  "description": "Token Monitor 的 OneBot (v11) 机器人网关插件，支持跨平台 Token 用量查询、原生暗黑卡片渲染、定时日报与超额告警订阅服务。",
+  "main": "backend.cjs",
+  "scripts": {
+    "test": "node tests/test-plugin.js",
+    "package": "node scripts/package.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BYWled/token-monitor-plugin-onebot.git"
+  },
+  "keywords": [
+    "token-monitor",
+    "token-monitor-plugin",
+    "onebot",
+    "onebot-v11",
+    "qq-bot",
+    "llm-tokens",
+    "ai-monitoring"
+  ],
+  "author": {
+    "name": "BYWled",
+    "email": "by@wled.top",
+    "url": "https://github.com/BYWled"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/BYWled/token-monitor-plugin-onebot/issues"
+  },
+  "homepage": "https://github.com/BYWled/token-monitor-plugin-onebot#readme"
+}

@@ -1,0 +1,143 @@
+{
+  "tmApi": 1,
+  "id": "onebot-monitor",
+  "name": "OneBot 机器人网关",
+  "version": "1.0.0",
+  "description": "接入 OneBot (v11) 协议，提供 Token Monitor 用量查询、原生暗黑卡片渲染、定时日报推送与超额告警订阅服务。",
+  "author": "BYWled",
+  "homepage": "https://github.com/BYWled/token-monitor-plugin-onebot",
+  "repository": "https://github.com/BYWled/token-monitor-plugin-onebot",
+  "license": "GPL-3.0",
+  "engines": {
+    "tokenMonitor": ">=1.0.0"
+  },
+  "ui": "ui.mjs",
+  "backend": "backend.cjs",
+  "background": true,
+  "files": [
+    "ui.mjs",
+    "backend.cjs",
+    "style.css"
+  ],
+  "css": [
+    "style.css"
+  ],
+  "views": [
+    {
+      "id": "dashboard",
+      "title": "OneBot 机器人",
+      "surfaces": [
+        "page",
+        "home",
+        "settings"
+      ],
+      "defaultSurfaces": [
+        "page"
+      ],
+      "icon": "bot"
+    }
+  ],
+  "settings": {
+    "version": 1,
+    "fields": [
+      {
+        "id": "replyFormat",
+        "type": "select",
+        "label": "消息返回格式",
+        "description": "设置 OneBot 消息回复形式（图片卡片、纯文本或图文兼备）",
+        "default": "image",
+        "options": [
+          { "value": "image", "label": "图片卡片" },
+          { "value": "text", "label": "纯文本" },
+          { "value": "both", "label": "图文兼备" }
+        ]
+      },
+      {
+        "id": "connectionMode",
+        "type": "select",
+        "label": "OneBot 连接模式",
+        "description": "正向 WS 客户端（连接 OneBot 服务端）或反向 WS 服务端（在本地端口等待连接）",
+        "default": "forward",
+        "options": [
+          { "value": "forward", "label": "正向 WebSocket 客户端" },
+          { "value": "reverse", "label": "反向 WebSocket 服务端" }
+        ]
+      },
+      {
+        "id": "wsUrl",
+        "type": "string",
+        "label": "正向 WS 服务端地址",
+        "description": "NapCat / LLOneBot / Lagrange 等开放的 WebSocket 地址",
+        "default": "ws://127.0.0.1:3001",
+        "maxLength": 512
+      },
+      {
+        "id": "serverPort",
+        "type": "number",
+        "label": "反向 WS 监听端口",
+        "description": "反向 WebSocket 服务端在本地监听的 TCP 端口",
+        "default": 8080,
+        "integer": true,
+        "min": 1024,
+        "max": 65535
+      },
+      {
+        "id": "accessToken",
+        "type": "string",
+        "label": "访问令牌 (Access Token)",
+        "description": "OneBot 鉴权密钥（无鉴权可留空）",
+        "default": "",
+        "maxLength": 512
+      },
+      {
+        "id": "adminIds",
+        "type": "string",
+        "label": "管理员 QQ 账号",
+        "description": "允许执行查询与订阅指令的管理员 QQ（多个用逗号隔开）",
+        "default": "",
+        "maxLength": 1024
+      },
+      {
+        "id": "autoDailyReport",
+        "type": "boolean",
+        "label": "开启每日定时日报",
+        "description": "每天固定时间向已订阅的群或私聊推送用量汇总",
+        "default": true
+      },
+      {
+        "id": "dailyReportTime",
+        "type": "string",
+        "label": "定时日报时间 (HH:mm)",
+        "description": "例如 22:00 或 09:30",
+        "default": "22:00",
+        "maxLength": 5
+      },
+      {
+        "id": "autoAlert",
+        "type": "boolean",
+        "label": "开启用量超额告警",
+        "description": "今日 Token 或费用超出设定阈值时主动向订阅目标告警",
+        "default": true
+      },
+      {
+        "id": "tokenAlertThreshold",
+        "type": "number",
+        "label": "Token 告警阈值",
+        "description": "今日 Token 消耗达到此值触发告警（设为 0 关闭）",
+        "default": 1000000,
+        "integer": true,
+        "min": 0,
+        "max": 100000000000
+      },
+      {
+        "id": "costAlertThreshold",
+        "type": "number",
+        "label": "费用告警阈值 (USD)",
+        "description": "今日已知费用超过此金额触发告警（设为 0 关闭）",
+        "default": 5,
+        "min": 0,
+        "max": 1000
+      }
+    ]
+  }
+}
